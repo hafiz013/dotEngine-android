@@ -11,14 +11,14 @@
         android:id="@+id/room"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="房间"
+        android:hint="room"
         android:text="default"/>
 
     <Button
         android:id="@+id/toCropActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="每个人的视频存在各自view里面"/>
+        android:text="Each person's video exists in their own view"/>
 
 
     <!--<Button-->

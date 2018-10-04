@@ -40,26 +40,26 @@
                 android:id="@+id/btnSwitchCamera"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="切换摄像头"/>
+                android:text="Switch camera"/>
 
             <Button
                 android:id="@+id/btnSwitchEnableVideo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="关闭本地视频"/>
+                android:text="Turn off local video"/>
 
 
             <Button
                 android:id="@+id/btnSwitchEnableAudio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="关闭本地音频"/>
+                android:text="Turn off local audio"/>
 
             <Button
                 android:id="@+id/speakerphoneOn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="关闭扬声器"/>
+                android:text="Turn off the speaker"/>
 
             <LinearLayout
                 android:id="@+id/parentLayout"
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/scrollViewLayout"
         android:layout_centerHorizontal="true"
-        android:text="加入房间"/>
+        android:text="Join the room"/>
 
     <TextView
         android:id="@+id/textView"

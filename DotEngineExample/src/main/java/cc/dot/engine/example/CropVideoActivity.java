@@ -2,6 +2,7 @@ package cc.dot.engine.example;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.SurfaceView;
@@ -26,7 +27,7 @@ import cc.dot.engine.type.DotEngineVideoProfileType;
 import cc.dot.engine.type.DotEngineWarnType;
 
 
-public class CropVideoActivity extends Activity {
+public class CropVideoActivity extends AppCompatActivity {
 
     private static String TAG = CropVideoActivity.class.getSimpleName();
 

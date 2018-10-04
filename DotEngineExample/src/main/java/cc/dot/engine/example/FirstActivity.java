@@ -1,11 +1,16 @@
 package cc.dot.engine.example;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
@@ -30,8 +35,9 @@ import cc.dot.engine.utils.PermissionsUtils;
 
 
 
-public class FirstActivity extends Activity {
+public class FirstActivity extends AppCompatActivity {
 
+    private static final int REQUEST_CAM_READ_WRITE = 123;
     private Handler handler;
 
     private TextView mRooText;
@@ -71,7 +77,10 @@ public class FirstActivity extends Activity {
 
         findViewById(R.id.loginLayout).setVisibility(View.VISIBLE);
 
-
+        if ( ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CAM_READ_WRITE);
+        }
         if (!permissionsUtils.hasPermissions(FirstActivity.this)) {
             permissionsUtils.requestPermissions(FirstActivity.this, new PermissionsUtils.Callback() {
                 @Override
